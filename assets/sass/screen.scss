@@ -1,0 +1,99 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+
+// Settings
+
+$text-color			: #1b1b1b;
+
+$home-page  		: #62193f;
+$about-page 		: #315d8f;
+$portfolio-page 	: #315d8f;
+$contact-page 		: #315d8f;
+
+/* Globals */
+
+* { @include box-sizing(border-box); position: relative; }
+body { margin: 0; font-family: 'Open Sans', 'Arial', sans-serif; color: $text_color; min-width: 960px; }
+.wrapper { width: 960px; margin: 0 auto; display: block; }
+.clearfix { @include clearfix(); }
+
+
+// Media Queries
+
+
+// Navigation styles
+
+nav {
+	z-index: 10;
+	height: 36px;
+	display: block;
+	ul {
+		width: 960px;
+		margin: 0 auto;
+		text-align: right;
+		li {
+			float: right;
+			a {
+				position: relative;
+				top: 4px;
+				display: inline-block;
+				margin: 0 0 0 10px;
+				color: white;
+				text-decoration: none;
+				font-size: 13px;
+				@include border-radius(5px);
+				padding: 7px;
+				&:hover, &.active {
+					background: rgba(0,0,0,0.7);
+				}
+			}
+		}
+	}
+}
+
+
+// Body styles
+
+#body {
+	display: block;
+	article {
+		z-index: 10;
+		width: 960px;
+		margin: 0 auto;
+		section {
+			width: 550px;
+			height: 600px;
+			background: rgba(0,0,0,0.8);
+		}
+	}
+}
+
+
+/* Themeability */
+
+// Theme Mixins
+
+@mixin nav-colors ($nav-color) { background: $nav-color; }
+
+@mixin body-colors ($body-color, $background-image) {
+	background-image: image-url($background-image);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: $body-color;
+	@include background-size(cover); }
+
+// Page States
+
+#page-home { nav { @include nav-colors($home-page); } #body { @include body-colors($home-page, 'bg-home.jpg'); } }
+#page-about { nav { @include nav-colors($about-page); } #body { @include body-colors($about-page, 'bg-home.jpg'); } }
+#page-portfolio { nav { @include nav-colors($portfolio-page); } #body { @include body-colors($portfolio-page, 'bg-home.jpg'); } }
+#page-contact { nav { @include nav-colors($contact-page); } #body { @include body-colors($contact-page, 'bg-home.jpg'); } }
+
