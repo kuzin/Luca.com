@@ -40,16 +40,29 @@
             </ul>
         </nav>
 
-        <article>
-            <header>
-                <a href="/">Luca Paganico Designs</a>
-            </header>
-            <section>
-            </section>
-        </article>
+        <!-- Body Design -->
+
+        <div id="body">
+
+            <article>
+                <section>
+                    <header>
+                    <a href="/">Luca Paganico Designs</a>
+                </header>
+                </section>
+            </article>
+
+        </div>
+
+        <!-- Hardcore Footer Action -->
+
+        <footer>
+            I am the footer!
+        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script src="assets/js/jquery.fullscreen.js" type="text/javascript"></script>
         <script>
             !window.jQuery && document.write(
                 unescape(
@@ -57,7 +70,11 @@
                 )
             )
         </script>
-        <script src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#background-image').fullscreenBackground();
+            });
+        </script>
         <!--[if lt IE7]>
             <script src="assets/js/libs/dd_belated.js"></script>
             <script>DD_belatedPNG.fix('img, .png_bg');</script>
