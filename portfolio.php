@@ -52,11 +52,15 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <script src="assets/js/libs/jquery.fullscreen.js" type="text/javascript"></script>
+        <script src="assets/js/libs/jquery.shadowbox.js" type="text/javascript"></script>
         <script src="assets/js/script.js" type="text/javascript"></script>
         <!--[if lt IE7]>
             <script src="assets/js/libs/dd_belated.js"></script>
             <script>DD_belatedPNG.fix('img, .png_bg');</script>
         <![endif]-->
+        <script type="text/javascript">
+            Shadowbox.init();
+        </script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

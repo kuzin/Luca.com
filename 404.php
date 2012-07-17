@@ -29,7 +29,7 @@
         <script src="assets/js/libs/modernizr-1.7.min.js"></script>
     </head>
 
-    <body id="page-<?=($page != '') ? $page : 'home'?>">
+    <body id="page-home">
         
         <nav>
             <? include('partials/nav.php'); ?>
@@ -42,7 +42,9 @@
                     <header>
                         <a href="/" id="logo">Luca Paganico Designs</a>
                     </header>
-                    <? include('content/' . $page . '.php'); ?>  
+                    <h1>Oh noes. 404</h1>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                    <a href="/"><a href="/" class="btn">Go Back Home</a>
                 </section>
             </article>
 

@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+* { @include box-sizing(border-box); }
+
+body { margin: 0 !important; font-family: 'Open Sans', 'Arial', sans-serif;
+	display: block;
+	padding: 3px;
+	p { color: #ffffff; }
+	h1, h2, h3 { color: #ffffff; }
+}
+
+form.wufoo { 
+	header.info { 
+		border-bottom: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		h2 { 
+			padding: 30px 0 15px 0 !important; 
+			color: white !important; 
+			font-size: 100% !important; 
+			font-weight: 400 !important; 
+		}
+		div {
+			font-size: 13px !important;
+			line-height: 23px !important;
+			padding-bottom: 15px !important;
+			color: white !important;
+			font-style: normal !important;
+		}
+	}
+	label { color: #aaa !important; font-size: 14px !important;}
+	label.desc, legend.desc {
+		color: #eaeaea !important;
+		font-size: 20px;
+	}
+	li {
+		width: 100% !important;
+		padding: 0 0 15px 0 !important;
+		input.text { background: #222 !important;}
+		&.error {
+			background: transparent !important;
+		}
+		&.buttons {
+			margin-top: -10px;
+		}
+		&.focused {
+			background: transparent !important;
+			label.desc, span {
+				color: white;
+			}
+		}
+	}
+}
+form li.buttons input,
+.wufoo input.bxTxt {
+	margin-top: 10px;
+	@include background(image-url('button-bg.png'));
+	background-position: top center;
+	&:hover { background-position: bottom center; }
+	border: 2px solid #674c46;
+	@include border-radius(5px);
+	@include text-shadow(0 -2px 0 rgba(0,0,0,0.5));
+	font-size: 14px;
+	width: 100%;
+	height: 40px; line-height: 40px;
+	display: inline-block;
+	text-decoration: none;
+	color: white !important;
+	cursor: pointer;
+}
+
+#errorLi {
+	width: 99%;
+	margin: 15px auto 15px auto;
+	background: white !important;
+	border: 1px solid red;
+	text-align: center;
+	padding: 15px !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0 !important;
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select { padding: 15px; }
+form span.req { color: lighten(#422A25,15) !important; }
+.instruct { display: none !important; }
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select { background: #222 !important; color: #ccc !important; outline: none !important; &:active, &:focus { border: 1px solid lighten(#422A25,15); } width: 100%; }
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select { }
+.wufoo li div, .wufoo li span, .wufoo li div label, .wufoo li span label { color: #eaeaea;}
+.wufoo li.focused label.desc, .wufoo li.focused legend.desc, .wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label, .safari .wufoo li.focused input.file { color: white; }
+.wufoo li.focused label.desc, .wufoo li.focused legend.desc, .wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label, .safari .wufoo li.focused input.file { color: white; }
